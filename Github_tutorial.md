@@ -88,13 +88,15 @@ Click **Publish Branch** in Source Control (or the cloud icon in the status bar)
 
 ## 8. Tag a release 🖥️ / 🌐
 
-Tag the merged commit on `main` so the release can be referenced later. Use [semantic versioning](https://semver.org/) (`vMAJOR.MINOR.PATCH`, e.g. `v1.2.0`).
+Tag the merged commit on `main` so the release can be referenced later. Use board name / semantic versioning (`BoarbName/vMAJOR_HW.MAJOR_SW.MINOR_SW`, e.g. `IoBoard/v2.0.3`).
+
+> **Note:** Don't use the tag message. Leave it empty; put any release information in the GitHub release notes instead.
 
 ### Option A: in VS Code 🖥️
 
 1. Make sure you are on `main` and it is up to date (**Source Control → `...` → Pull**).
 2. Open the Command Palette (`Ctrl+Shift+P`) and run **Git: Create Tag**.
-3. Enter the tag name `<version>`, then a short message (e.g. `Release <version>`) to create an annotated tag.
+3. Enter the tag name `<version>` and press Enter. When asked for a tag message, leave it empty and press Enter (see the note below).
 4. Push the tag: Command Palette → **Git: Push Tags**. (Tags are not pushed by a normal push or Sync.)
 5. 🌐 Optional: on GitHub, open **Releases → Draft a new release**, pick `<version>` from **Choose a tag**, add release notes, and click **Publish release**.
 
